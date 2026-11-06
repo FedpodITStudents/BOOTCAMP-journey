@@ -1,5 +1,5 @@
-import java.util.*;
-// import java.util.Scanner;
+import java.util.Random;
+import java.util.Scanner;
 public class RandomNumberTesting {
     public static void main(String[] args) {
         Random rand = new Random();
@@ -12,7 +12,17 @@ public class RandomNumberTesting {
         System.out.println("You have 3 attempts!!");
         int answer;
         while (attempts < 3) {
-            
+            System.out.println("Guess the answer");
+            answer = input.nextInt();
+            if(answer == randomNumber){
+            System.out.println("Congrats!! You got it right");
+            break;
+            }
+            System.out.println("You tried! But try again");
+            attempts++;
+        }
+        if(attempts == 3){
+            System.out.println("You failed all the attempts, but you tried\n The answer is: "+randomNumber);
         }
 
 
